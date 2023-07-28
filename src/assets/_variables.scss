@@ -286,20 +286,24 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary: $blue !default;
-$secondary: $gray-600 !default;
+$primary: #482D0D; //$blue !default;
+$secondary: #7C4708; //$gray-600 !default;
+$tertiary: #D0BFAB;
+$quaternary:#F5EADC;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: $gray-100 !default;
-$dark: $gray-900 !default;
+$light: #FFFBF8; //$gray-100 !default;
+$dark: #1B1010; //$gray-900 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
+  "tertiary": $tertiary,
+  "quaternary": $quaternary,
   "success": $success,
   "info": $info,
   "warning": $warning,
@@ -364,8 +368,13 @@ $spacers: (
   1: $spacer * .25,
   2: $spacer * .5,
   3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  4: $spacer * 1.25,//1.5,
+  5: $spacer * 1.5,//3,
+  6: $spacer * 2,
+  7: $spacer * 2.5,
+  8: $spacer * 5,
+  9: $spacer * 6,
+  10: $spacer * 7.5,
   ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -559,7 +568,7 @@ $font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
 $font-weight-semibold: 600 !default;
-$font-weight-bold: 700 !default;
+$font-weight-bold: 600 !default; //700 !default;
 $font-weight-bolder: bolder !default;
 
 $font-weight-base: $font-weight-normal !default;
@@ -568,12 +577,16 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.75 !default;
+$h1-font-size: $font-size-base * 3.5 !default; //* 2.5 !default;
+$h2-font-size: $font-size-base * 2.5 !default; //* 2 !default;
+$h3-font-size: $font-size-base * 1.625 !default; //* 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
-$h6-font-size: $font-size-base !default;
+$h6-font-size: $font-size-base * 1.125 !default; //!default;
+$h7-font-size: $font-size-base !default;
+$h8-font-size: $font-size-base * 0.9375 !default;
+$h9-font-size: $font-size-base * 0.875 !default;
+$h10-font-size: $font-size-base * 0.75 !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -583,7 +596,11 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size) !default;
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+  10: $h10-font-size) !default;
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
@@ -770,7 +787,7 @@ $btn-disabled-opacity: .65 !default;
 $btn-active-box-shadow: inset 0 3px 5px rgba($black, .125) !default;
 
 $btn-link-color: var(--#{$prefix}link-color) !default;
-$btn-link-hover-color: var(--#{$prefix}link-hover-color) !default;
+// $btn-link-hover-color: var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color: $gray-600 !default;
 
 // Allows for customizing button radius independently from global border radius
@@ -1071,24 +1088,26 @@ $nav-link-transition: color .15s ease-in-out,
   border-color .15s ease-in-out !default;
 $nav-link-disabled-color: $gray-600 !default;
 
-$nav-tabs-border-color: $gray-300 !default;
+$nav-tabs-border-color: $secondary !default;//$gray-300 !default;
 $nav-tabs-border-width: $border-width !default;
 $nav-tabs-border-radius: $border-radius !default;
-$nav-tabs-link-hover-border-color: $gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color: $gray-700 !default;
+$nav-tabs-link-hover-border-color: $tertiary $tertiary//$gray-200 $gray-200 
+$nav-tabs-border-color !default;
+$nav-tabs-link-active-color: $primary;//$gray-700 !default;
 $nav-tabs-link-active-bg: $body-bg !default;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
+$nav-tabs-link-active-border-color:$secondary $secondary //$gray-300 $gray-300 
+$nav-tabs-link-active-bg !default;
 
-$nav-pills-border-radius: $border-radius !default;
-$nav-pills-link-active-color: $component-active-color !default;
-$nav-pills-link-active-bg: $component-active-bg !default;
+$nav-pills-border-radius: none;//$border-radius !default;
+$nav-pills-link-active-color: $primary;//$component-active-color !default;
+$nav-pills-link-active-bg: transparent;//$component-active-bg !default;
 // scss-docs-end nav-variables
 
 
 // Navbar
 
 // scss-docs-start navbar-variables
-$navbar-padding-y: $spacer * .5 !default;
+$navbar-padding-y: $spacer * 2.5 !default; // $spacer * .5 !default;
 $navbar-padding-x: null !default;
 
 $navbar-nav-link-padding-x: .5rem !default;
@@ -1108,7 +1127,7 @@ $navbar-toggler-border-radius: $btn-border-radius !default;
 $navbar-toggler-focus-width: $btn-focus-width !default;
 $navbar-toggler-transition: box-shadow .15s ease-in-out !default;
 
-$navbar-light-color: rgba($black, .55) !default;
+$navbar-light-color: rgba($dark, .7) !default;//rgba($black, .55) !default;
 $navbar-light-hover-color: rgba($black, .7) !default;
 $navbar-light-active-color: rgba($black, .9) !default;
 $navbar-light-disabled-color: rgba($black, .3) !default;
@@ -1199,7 +1218,7 @@ $pagination-padding-x-lg: 1.5rem !default;
 $pagination-font-size: $font-size-base !default;
 
 $pagination-color: var(--#{$prefix}link-color) !default;
-$pagination-bg: $white !default;
+$pagination-bg: $light !default;
 $pagination-border-radius: $border-radius !default;
 $pagination-border-width: $border-width !default;
 $pagination-margin-start: (
@@ -1535,7 +1554,7 @@ $breadcrumb-item-padding-x: .5rem !default;
 $breadcrumb-margin-bottom: 1rem !default;
 $breadcrumb-bg: null !default;
 $breadcrumb-divider-color: $gray-600 !default;
-$breadcrumb-active-color: $gray-600 !default;
+$breadcrumb-active-color: $primary;//$gray-600 !default;
 $breadcrumb-divider: quote("/") !default;
 $breadcrumb-divider-flipped: $breadcrumb-divider !default;
 $breadcrumb-border-radius: null !default;

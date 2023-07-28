@@ -8,7 +8,7 @@ export default {
     RouterView, RouterLink
   },
   computed: {
-    ...mapState(cartStore, ['carts'])
+    ...mapState(cartStore, ['carts','cartNum'])
   },
   methods: {
     ...mapActions(cartStore, ['getCart'])
@@ -20,32 +20,55 @@ export default {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary mt-2">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-md bg-body-tertiary bg-tertiary py-4">
+  <div class="container">
+    <a class="navbar-brand"  href="#">
+      <img src="/public/logo.png" alt="" style="height:40px">
+    </a>
+    <div>
+      <i class="me-3 d-md-none d-inline-block">
+        <RouterLink to="/carts" class="nav-link py-0">
+          <i class="bi bi-cart nav-link position-relative" style="display:inline-block">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger p-2">
+              {{ cartNum }}
+            </span>
+          </i>
+        </RouterLink>
+      </i>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav d-flex justify-content-center w-100 text-center">
-          <li class="nav-item">
-            <RouterLink to="/" class="nav-link">Home</RouterLink>
+    </div>
+    <div class="offcanvas offcanvas-top h-100  bg-secondary" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header text-light">
+        <img id="offcanvasTopLabel" src="/public/logo.png" alt="" style="width: auto;filter: brightness(100);">
+        <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body justify-content-end text-center">
+        <ul class="navbar-nav">
+          <li class="nav-item px-lg-2 px-md-0 py-md-0 py-3">
+            <RouterLink to="/" class="nav-link text-sm-light">首頁</RouterLink>
           </li>
-          <li class="nav-item">
-            <RouterLink to="/about" class="nav-link">About</RouterLink>
+          <li class="nav-item px-lg-2 px-md-0 py-md-0 py-3">
+            <RouterLink to="/news" class="nav-link text-sm-light">最新消息</RouterLink>
           </li>
-          <li class="nav-item">
-            <RouterLink to="/products" class="nav-link">Products</RouterLink>
+          <li class="nav-item px-lg-2 px-md-0 py-md-0 py-3">
+            <RouterLink to="/products" class="nav-link text-sm-light">產品列表</RouterLink>
           </li>
-          <li class="nav-item">
-            <RouterLink to="/admin/products" class="nav-link">Backstage</RouterLink>
+          <li class="nav-item d-md-none d-block px-lg-2 px-md-0 py-md-0 py-3 text-light">
+              ——————
+            </li>
+          <!-- <li class="nav-item px-lg-2 px-md-0 py-md-0 py-3">
+            <RouterLink to="/admin/products" class="nav-link text-sm-light">Backstage</RouterLink>
+          </li> -->
+          <li class="nav-item px-lg-2 px-md-0 py-md-0 py-3">
+            <RouterLink to="/favorite" class="nav-link text-sm-light">慾望清單</RouterLink>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-md-block d-none">
             <RouterLink to="/carts" class="nav-link py-0">
-              <i class="bi bi-cart nav-link position-relative">
+              <i class="bi bi-cart nav-link position-relative" style="display:inline-block">
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger p-2">
-                  {{ carts.length }}
+                  {{ cartNum }}
                 </span>
               </i>
             </RouterLink>
@@ -53,7 +76,28 @@ export default {
         </ul>
       </div>
     </div>
-  </nav>
-  <!-- 作為內頁顯示所使用 -->
-  <RouterView></RouterView>
+  </div>
+</nav>
+<!-- 作為內頁顯示所使用 -->
+<RouterView style="min-height: calc(100vh - 370px)"></RouterView>
+
+<!-- footer -->
+<div class="footer follow bg-tertiary py-8">
+  <div class="container-md">
+    <div class="follow-title">
+      <div class="fs-8 text-md-center mb-md-7 mb-3 roboto ls-4 px-5">
+        FOLLOW US.
+      </div>
+    </div>
+    <div class="row follow-link justify-content-center">
+      <a href="" class="fs-5 text-primary col-md-auto px-7 text-md-center roboto ls-4 border-end border-primary">LINE</a>
+      <a href="" class="fs-5 text-primary col-md-auto px-7 text-md-center roboto ls-4 border-end border-primary">FACEBOOK</a>
+      <a href="" class="fs-5 text-primary col-md-auto px-7 text-md-center roboto ls-4 border-end border-primary">INSTAGRAM</a>
+      <a href="" class="fs-5 text-primary col-md-auto px-7 text-md-center roboto ls-4">Email</a>
+    </div>
+    <div class="follow-copyright fs-10 text-md-center mt-9 roboto ls-4 px-5">
+      copyright@2023. all rights reserved.
+    </div>
+  </div>
+</div>
 </template>

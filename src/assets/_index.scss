@@ -1,0 +1,119 @@
+.service-box{
+  height: 80rem;
+}
+
+img{
+  object-fit: cover;
+}
+
+.text-2{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow-left{
+  background-image: url('/public/arrow-left.png');
+  background-blend-mode: lighten;
+  width: 2rem;
+  height: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.arrow-right{
+  background-image: url('/public/arrow-right.png');
+  width: 2rem;
+  height: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+$img: '../../public/arrow-left.jpg';
+
+//btn
+.btn-outline-primary{
+  box-shadow: inset 0 -3px 0 -1px $tertiary;
+}
+
+.btn-outline-danger {
+  box-shadow: inset 0 -3px 0 -1px $danger;
+  opacity: .55;
+}
+
+.btn-outline-primary:hover {
+  color: $primary;
+  box-shadow: inset 0 -3px 0 -1px $primary;
+  background-color: transparent;
+}
+
+.btn-outline-danger:hover {
+  color: $danger;
+  box-shadow: inset 0 -3px 0 -1px $danger;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.btn-outline-primary:checked+.btn,
+:not(.btn-outline-primary)+.btn-outline-primary:active,
+.btn-outline-primary:first-child:active,
+.btn-outline-primary.active,
+.btn-outline-primary.show {
+  color: var(--bs-btn-active-bg);
+  background-color: transparent;
+  border-color: var(--bs-btn-active-border-color);
+}
+
+.btn-outline-danger:checked+.btn,
+:not(.btn-outline-danger)+.btn-outline-danger:active,
+.btn-outline-danger:first-child:active,
+.btn-outline-danger.active,
+.btn-outline-danger.show {
+  color: var(--bs-btn-active-bg);
+  background-color: transparent;
+  border-color: var(--bs-btn-active-border-color);
+}
+
+.nav-link:hover,
+.nav-link:focus,.router-link-exact-active {
+  color: $dark;
+}
+
+//image
+@media(max-width:992px){
+  .service-box {
+    height: 88rem;
+  }
+}
+
+@media (max-width: 768px){
+  .service-box {
+    height: 156rem;
+  }
+
+  .border-end{
+    border-right: none !important;
+  }
+
+  .text-sm-light{
+    color: $light;
+  }
+}
+
+@media(max-width:576px){
+  .service-box {
+    height: 63rem;
+  }
+
+  .mySwiper3 ,.mySwiper2{
+    .swiper-button-next {
+        display: none;
+      }
+    
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+}
