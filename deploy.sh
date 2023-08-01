@@ -23,7 +23,7 @@ git commit -m 'deploy'
 # if you are deploying to https://ChenHelena.github.io
 # git push -f git@github.com:ChenHelena/ChenHelena.github.io.git main
 
-# if you are deploying to https://ChenHelena.github.io/TastyTeaCo
-git push -f https://github.com/ChenHelena/TastyTeaCo.git main:gh-pages
+# if you are deploying to https://ChenHelena.github.io/vue-week0316
+git push -f https://github.com/ChenHelena/vue-week0316.git main:gh-pages
 
 cd -
