@@ -1,0 +1,148 @@
+body {
+  overflow-x: hidden;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: '';
+}
+
+.mySwiper,.mySwiper2{
+  .swiper-slide {
+    width: 80% !important;
+  }
+}
+
+.mySwiper2{
+  .swiper-slide{
+    transition: all .25s ease-out;
+    opacity: 1; 
+  }
+  .swiper-slide img {
+    max-width: 100%;
+    transition: all .25s ease-out;
+    transform: scale(.85);
+    transform-origin: center;
+    height: 48rem;
+    transform-origin: 14rem 0;
+  }
+  .swiper-slide-active+.swiper-slide~.swiper-slide {
+    opacity: .35;
+  }
+  .swiper-slide-active img {
+    transform: scale(1);
+  }
+}
+
+.mySwiper3,.mySwiper4 {
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    transition: all .25s ease-out;
+    opacity: 1;
+  }
+
+  .swiper-slide .card {
+    max-width: 100%;
+    transition: all .25s ease-out;
+    transform: scale(1,.85);
+    transform-origin: center;
+    transform-origin: 14rem 0;
+    height: 50rem;
+    // margin-right: 0;
+  }
+
+  .swiper-slide-active+.swiper-slide~.swiper-slide,.swiper-slide-next {
+    opacity: .35;
+    // margin-right: -3.5rem;  
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 1rem
+  }
+
+  .swiper-slide-active{
+    .card {
+      transform: scale(1);
+    }
+  } 
+}
+
+.mySwiper3{
+  .swiper-slide-prev {
+    opacity: 0;
+  }
+}
+
+.mySwiper4 {
+  .swiper-slide-prev {
+    width: 10% !important;
+    opacity: 0.35;
+  }
+
+  .swiper-slide img {
+    max-width: 100%;
+    transition: all .25s ease-out;
+    transform: scale(1, .9);
+    transform-origin: bottom;
+    // transform-origin: 14rem 0;
+    height: 50rem;
+    // margin-right: 0;
+  }
+  .swiper-slide-next{
+    width: 35% !important;
+  }
+  .swiper-slide-active {
+    width: 55% !important;
+    img{
+      transform: scaleY(0.95);
+    }
+
+    .overlay {
+      background-color: rgba(25, 29, 38, 0.4);
+      transition: opacity 0.2s ease;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: scaleY(0.95);
+      transform-origin: bottom;
+    }
+
+
+  }
+  .swiper-slide img {
+    padding: 0;
+  }
+}
+
+@media(max-width:768px){
+  .mySwiper4{
+    .swiper-slide {
+      width: inherit !important;
+    }
+
+  }
+}
+
+@media(max-width:576px){
+  .mySwiper2 {
+    .swiper-slide {
+      width: 100% !important;
+    }
+  }
+}
+
+
+
+
+

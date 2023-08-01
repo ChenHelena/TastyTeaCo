@@ -1,5 +1,14 @@
 @import "bootstrap/scss/functions";
 @import './variables';
+@import './utilities';
 @import 'bootstrap/scss/bootstrap';
 
-@import './utilities';
+
+@import './swiper';
+@import './index';
+@import './news';
+@import './products';
+@import './product';
+@import './carts';
+@import './loading';
+

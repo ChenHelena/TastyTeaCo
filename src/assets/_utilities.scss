@@ -1,3 +1,45 @@
+//image
 .object-fit-cover {
   object-fit: cover;
 }
+
+//font
+.roboto{
+  font-family: 'Roboto Slab', serif;
+}
+
+// Utilities
+
+$utilities: (
+  ) !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-merge(( 
+    "letter-spacing": (property: letter-spacing,
+      responsive: true,
+      class: ls,
+      values: (0: 0,
+        1: .1em,
+        2: .2em,
+        3: .3em,
+        4: .4em,
+      )),
+    "position": (property: position,
+      values: static relative absolute fixed sticky,
+      responsive: true,
+    ),
+    "opacity": (property: opacity,
+      class: opacity,
+      values: (0: 0,
+        1: .25,
+        2: .5,
+        3: .75,
+        4: 1.0,
+      ),
+      responsive: true,
+    ),
+    
+  ),
+  $utilities
+);
+
+

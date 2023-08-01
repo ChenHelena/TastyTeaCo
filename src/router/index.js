@@ -13,9 +13,13 @@ const router = createRouter({
           component: () => import('../views/front/HomeView.vue'),
         },
         {
-          path: 'about',
-          name: 'About',
-          component: () => import('../views/front/AboutView.vue'),
+          path: 'news',
+          name: 'News',
+          component: () => import('../views/front/NewsView.vue'),
+        },
+        {
+          path: 'news/:news_id',
+          component: () => import('../views/front/SingleNews.vue'),
         },
         {
           path: 'products',
@@ -28,6 +32,18 @@ const router = createRouter({
         {
           path: 'carts',
           component: () => import('../views/front/CartsView.vue'),
+        },
+        {
+          path: 'favorite',
+          component: () => import('../views/front/FavoriteView.vue'),
+        },
+        {
+          path: 'order',
+          component: () => import('../views/front/OrderView.vue'),
+        },
+        {
+          path: 'pay/:orderId',
+          component: () => import('../views/front/PayView.vue'),
         },
         {
           path: 'login',
@@ -64,5 +80,7 @@ const router = createRouter({
     // }
   ]
 })
+
+
 
 export default router

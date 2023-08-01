@@ -37,7 +37,7 @@
               </div>
             </div>
             <div v-else class="my-3">
-              <button @click="createImages"
+              <button @click="addImages"
                 class="btn btn-outline-primary btn-sm d-block w-100">
                 新增圖片
               </button>
