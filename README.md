@@ -1,7 +1,5 @@
-![GITHUB]( https://upload.cc/i1/2023/08/10/61Q9Lj.jpg
- "專案桌機首頁")
-![GITHUB]( https://upload.cc/i1/2023/08/10/Xse4fN.jpg
- "專案手機首頁")
+![GITHUB](https://upload.cc/i1/2023/08/10/975hEB.jpg
+ "專案首頁")
 
 > 奶茶專賣店
 
