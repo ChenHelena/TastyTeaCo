@@ -20,8 +20,8 @@ export default {
 </script>
 
 <template>
-<nav class="navbar navbar-expand-md bg-body-tertiary bg-tertiary py-4">
-  <div class="container">
+<nav class="navbar navbar-expand-md bg-body-tertiary bg-tertiary py-0">
+  <div class="container py-4">
     <a class="navbar-brand"  href="#">
       <img src="/public/logo.png" alt="" style="height:40px">
     </a>
