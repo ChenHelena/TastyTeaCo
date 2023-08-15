@@ -41,7 +41,7 @@ export default {
     </div>
     <div class="offcanvas offcanvas-top h-100  bg-secondary" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" data-bs-toggle="offcanvas">
       <div class="offcanvas-header text-light">
-        <img id="offcanvasTopLabel" src="/public/logo.png" alt="" style="width: auto;filter: brightness(100);">
+        <img id="offcanvasTopLabel" src="/public/logo.png" alt="" style="width: auto;filter: brightness(100);height: 40px;">
         <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body justify-content-end text-center">
