@@ -23,7 +23,7 @@ export default {
 <nav class="navbar navbar-expand-md bg-body-tertiary bg-tertiary py-0">
   <div class="container py-4">
     <a class="navbar-brand"  href="#">
-      <img src="/public/logo.png" alt="" style="height:40px">
+      <img src="/public/logo.png" alt="" style="height:40px;width: auto;">
     </a>
     <div>
       <i class="me-3 d-md-none d-inline-block">
