@@ -6,9 +6,11 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="banner-img">
-            <img
+            <RouterLink :to="`/products`">
+              <img
               src="https://unsplash.com/blog/content/images/2022/01/mathilde-langevin-EOsaTAETpo4-unsplash--1-.jpg"
               alt="milktea01" class="position-relative">
+            </RouterLink>
             <div class="overlay">
               <div class="swiper-text position-absolute bottom-0 start-0 mx-5" style="bottom:5%;left:5%;right:5%">
                 <div class="swiper-title">
@@ -21,8 +23,10 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          <RouterLink :to="`/products`">
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
           alt="milktea02">
+          </RouterLink>
           <div class="overlay">
             <div class="swiper-text position-absolute bottom-0 start-0 mx-5" style="bottom:5%;left:5%;right:5%">
               <div class="swiper-title">
@@ -35,9 +39,11 @@
         </div>
         <div class="swiper-slide">
           <div class="banner-img">
-            <img
-              src="https://unsplash.com/blog/content/images/2022/01/mathilde-langevin-EOsaTAETpo4-unsplash--1-.jpg"
-              alt="milktea01" class="position-relative">
+            <RouterLink :to="`/products`">
+              <img
+                src="https://unsplash.com/blog/content/images/2022/01/mathilde-langevin-EOsaTAETpo4-unsplash--1-.jpg"
+                alt="milktea01" class="position-relative">
+            </RouterLink>
             <div class="overlay">
               <div class="swiper-text position-absolute bottom-0 start-0 mx-5" style="bottom:5%;left:5%;right:5%">
                 <div class="swiper-title">
@@ -50,8 +56,10 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-          alt="milktea02">
+          <RouterLink :to="`/products`">
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            alt="milktea02">
+          </RouterLink>
           <div class="overlay">
             <div class="swiper-text position-absolute bottom-0 start-0 mx-5" style="bottom:5%;left:5%;right:5%">
               <div class="swiper-title">
@@ -83,8 +91,7 @@
           <div class="fs-2 mb-sm-9 mb-7 text-primary">最高品質的把關者</div>
         </div>
         <div class="container d-sm-block d-none">
-          <div class="service-item row" data-aos="fade-up"
-       data-aos-duration="2000">
+          <div class="service-item row">
             <div class="col-md-4">
               <div class="card border-0 bg-transparent">
                 <img src="https://images.unsplash.com/photo-1563911892437-1feda0179e1b?crop=faces%2Cedges&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjc4ODA5Mzk1&ixlib=rb-4.0.3&q=60&w=1200&auto=format&h=630&mark-w=64&mark-align=top%2Cleft&mark-pad=50&blend-mode=normal&blend-alpha=10&blend-w=1&mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&blend=000000" class="" alt="..." height="500">
@@ -154,9 +161,7 @@
   <div class="process bg-tertiary">
     <div class="container-fluid p-7">
       <div class="card mb-3 border-0">
-        <div class="row g-0" data-aos="fade-right"
-       data-aos-offset="300"
-       data-aos-easing="ease-in-sine" data-aos-duration="400">
+        <div class="row g-0">
           <div class="col-md-4">
             <img src="https://images.squarespace-cdn.com/content/v1/5c28bfdb7e3c3ac0e70e725a/1646010342923-MU4S4T0BH4I0NGEL20GK/ayaneshu-bhardwaj-CzShRoU5--o-unsplash+%281%29.jpg?format=2500w" style="height:40rem" alt="...">
           </div>
@@ -252,6 +257,7 @@
 
 </template>
 <script>
+import { RouterLink } from 'vue-router';
 import Swiper from 'swiper';
 import Swiper2, { Navigation, Pagination, Autoplay } from 'swiper';
 Swiper2.use([Navigation, Pagination, Autoplay]);
@@ -262,6 +268,9 @@ import cartStore from '../../stores/cart';
 import { mapState, mapActions } from 'pinia';
 import $ from 'jquery';
 export default{
+  components: {
+    RouterLink,
+  },
   computed:{
     ...mapState(newsStore,['news']),
     ...mapState(productsStore,['products']),

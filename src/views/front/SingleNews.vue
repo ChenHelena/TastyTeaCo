@@ -33,7 +33,7 @@ import newsStore from '../../stores/news';
           <img class="single-news-img" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600" :src="singleNews.news_img" alt="singleNews.news_title">
         </div>
         <div class="col-lg-6 position-relative" data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="600">
-          <div class="card-rounded p-5 bg-light w-100">
+          <div class="card-rounded p-5 bg-quaternary  w-100">
             <div class="fs-5 mb-2">{{ singleNews.news_title }}</div>
             <div class="fs-7">{{ singleNews.news_content }}</div>
           </div>

@@ -55,6 +55,9 @@ export default {
           <li class="nav-item px-lg-2 px-md-0 py-md-0 py-3">
             <RouterLink to="/products" class="nav-link text-sm-light">產品列表</RouterLink>
           </li>
+          <li class="nav-item px-lg-2 px-md-0 py-md-0 py-3">
+            <RouterLink to="/admin" class="nav-link text-sm-light">後台</RouterLink>
+          </li>
           <li class="nav-item d-md-none d-block px-lg-2 px-md-0 py-md-0 py-3 text-light">
               ——————
             </li>
@@ -79,7 +82,7 @@ export default {
   </div>
 </nav>
 <!-- 作為內頁顯示所使用 -->
-<RouterView style="min-height: calc(100vh - 370px)"></RouterView>
+<RouterView class="bg-white" style="min-height: calc(100vh - 370px)"></RouterView>
 
 <!-- footer -->
 <div class="footer follow bg-tertiary py-8">
@@ -90,10 +93,9 @@ export default {
       </div>
     </div>
     <div class="row follow-link justify-content-center">
-      <a href="" class="fs-5 text-primary col-md-auto px-7 text-md-center roboto ls-4 border-end border-primary">LINE</a>
-      <a href="" class="fs-5 text-primary col-md-auto px-7 text-md-center roboto ls-4 border-end border-primary">FACEBOOK</a>
-      <a href="" class="fs-5 text-primary col-md-auto px-7 text-md-center roboto ls-4 border-end border-primary">INSTAGRAM</a>
-      <a href="" class="fs-5 text-primary col-md-auto px-7 text-md-center roboto ls-4">Email</a>
+      <a href="https://line.me/ti/p/yjdysE5w_U" class="fs-5 text-primary col-md-auto px-7 text-md-center roboto ls-4 border-end border-primary">LINE</a>
+      <a href="https://www.instagram.com/qqqtzln/" class="fs-5 text-primary col-md-auto px-7 text-md-center roboto ls-4 border-end border-primary">INSTAGRAM</a>
+      <a href="mailto:qqqtzln@gmail.com" class="fs-5 text-primary col-md-auto px-7 text-md-center roboto ls-4">Email</a>
     </div>
     <div class="follow-copyright fs-10 text-md-center mt-9 roboto ls-4 px-5">
       copyright@2023. all rights reserved.
